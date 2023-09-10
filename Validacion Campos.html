@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validacion Campos</title>
+
+    <script>
+
+
+        function validar(){
+            var correo = document.Forma01.correo.value;
+            var pass = document.Forma01.pass.value;
+            var Seleccionar01 = document.Forma01.Seleccionar01.value;
+
+            if (correo === "" || pass === "" || Seleccionar01 === "0" ){
+                alert("Por favor, completa todos los campos.");
+            }else{
+                
+                    alert("Todos los campos están completos: " + correo + ", " + pass + ", " + Seleccionar01);
+            }
+        }
+
+
+    </script>
+
+</head>
+<body>
+
+    <!--Formularios-->
+    <form name="Forma01" id="Forma01" method="GET" action="recibe.php">
+    <input type="text" name="correo" id="correo" value="@" /> <br>
+    <input type="password" name="pass" id="pass" placeholder="Escribe tu contraseña" />
+    
+    <br>
+    <select name="Seleccionar01" id="Selecionar01">
+        <option value="0">Selecciona</option>
+        <option value="1">Gerente</option>
+        <option value="2">Ejecutivo</option>
+    </select><br>
+    <input type="submit" value="Enviar" onclick="validar(); return false;" />
+
+    <br>
+    
+
+    </select>
+
+
+    </form>
+
+</body>
+</html>
